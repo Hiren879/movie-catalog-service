@@ -25,10 +25,10 @@ public class MovieCatalogApi {
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 		// Get all movie ratings from userId
 		MovieRatingResponse movieRatingResponse = restTemplate
-				.getForObject("http://localhost:8083/movie-ratings/" + userId, MovieRatingResponse.class);
+				.getForObject("http://movie-rating-service/movie-ratings/" + userId, MovieRatingResponse.class);
 		// Get all movies from rating.movieId and return the list
 		return movieRatingResponse.getMovieRatings().stream().map(rating -> {
-			MovieResponse movieResponse = restTemplate.getForObject("http://localhost:8084/movie-info/" + rating.getMovieId(),
+			MovieResponse movieResponse = restTemplate.getForObject("http://movie-info-service/movie-info/" + rating.getMovieId(),
 					MovieResponse.class);
 			return new CatalogItem(movieResponse.getMovie().getName(), "desc", rating.getRating());
 		}).collect(Collectors.toList());
