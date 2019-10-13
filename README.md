@@ -23,4 +23,7 @@ Current scope of this project is just to demonstrate
 4. Add Open API specification
 
 ## Credits 
-Course 1 & 2 from JavaBrains  
+Microservice course 1 & 2 from JavaBrains
+
+## Author
+Hiren Savalia
