@@ -21,6 +21,7 @@ Current scope of this project is just to demonstrate
 2. Add generic validation code
 3. Add generic SQL & XSS injection prevention code
 4. Add Open API specification
+5. Resiliency & fault tolerance
 
 ## Credits 
 Microservice course 1 & 2 from JavaBrains
